@@ -5,6 +5,11 @@ Here, we report the experiment results for three research questions that are sta
 ## eCommerce REES46
 
 ### Full Result Table
+
+
+| Attempt | #1  | #2  |
+| :---:   | :-: | :-: |
+| Seconds | 301 | 283 |
  
 
 ## G1 news                                              
