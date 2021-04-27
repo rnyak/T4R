@@ -6,10 +6,12 @@ Here, we report the experiment results for three research questions that are sta
 
 ### Full Result Table
 
-
-| Attempt | #1  | #2  |
+|Algorithm | NDCG@20  | HR@20  |
 | :---:   | :-: | :-: |
-| Seconds | 301 | 283 |
+| VSKNN |  | 283 |
+| VSTAN | 301 | 283 |
+| GRU4Rec(full train) | 301 | 283 |
+| GRU4Rec(sliding window) | 301 | 283 |
  
 
 ## G1 news                                              
