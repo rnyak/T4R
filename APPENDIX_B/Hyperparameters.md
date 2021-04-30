@@ -22,24 +22,6 @@ The datasets used in the experiments can be downloaded here: <br>
 <br>
 <h2>Table 1. Transformers (Additional hyperparameters when using side information)</h2>
 
-<style type="text/css">
-	table.hp-table {
-		font-size: 14px;
-		border: 1px solid #CCC; 
-		font-family: Arial, Helvetica, sans-serif;
-	} 
-	.hp-table td {
-		padding: 4px;
-		margin: 3px;
-		border: 1px solid #CCC;
-	}
-	.hp-table th {
-		background-color: #104E8B; 
-		color: #FFF;
-		font-weight: bold;
-    font-size: 14px;
-	}
-</style>
 </head> 
 <table class="hp-table">
 <thead><tr class="table-firstrow"><th>Experiment Group </th><th>Type </th><th>Name</th><th>Values</th><th>Distribution</th></tr></thead><tbody>
@@ -54,25 +36,6 @@ The datasets used in the experiments can be downloaded here: <br>
 </tbody></table>
 <br>
 <h2>Table 2. Baselines</h2>
-
-<style type="text/css">
-	table.hp-table {
-		font-size: 14px;
-		border: 1px solid #CCC; 
-		font-family: Arial, Helvetica, sans-serif;
-	} 
-	.hp-table td {
-		padding: 4px;
-		margin: 3px;
-		border: 1px solid #CCC;
-	}
-	.hp-table th {
-		background-color: #104E8B; 
-		color: #FFF;
-		font-weight: bold;
-    font-size: 14px;
-	}
-</style>
 <table class="hp-table">
 <thead><tr class="table-firstrow"><th>Experiment Group </th><th>Type </th><th>Name</th><th>Values</th><th>Distribution</th></tr></thead><tbody>
  <tr><td rowspan=2>Common parameters </td><td rowspan=2>&nbsp;</td><td>eval_on_last_item_seq_only</td><td>True</td><td rowspan=2>&nbsp;</td></tr>
