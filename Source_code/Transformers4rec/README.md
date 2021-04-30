@@ -12,7 +12,7 @@ We use the follow ingredients to implement RecSys-Transformer pipelines:
 
 
 ## Enviroment Setup
-You can choose Conda or Docker to setup your local environment.
+You can use Conda to setup your local environment. Docker setup commands to create a local container for development will be available soon.
 
 
 ### Conda
@@ -33,29 +33,6 @@ To be able to run and debug the pipeline using Visual Studio Code:
 - Click in *File / Open Folder*, selecting the root `hf4rec` folder
 - Create a hidden folder `.vscode` within that root folder and copy there an example of the VS Code launch config, available in `resources/dev_env/vscode/launch.json`
 - Now, in the Run tab on the left VS Code bar, you can select one of the example configurations (defined in `launch.json`) and run/debug the code.
-
-### Docker
-
-Here are the commmands to create a local container for development. 
-
-Available containers:
-- `containers/Dockerfile.dev_nvt` (recommended, GPU-only) - Supports the GPU-accelerated [NVTabular](https://github.com/NVIDIA/NVTabular/) dataloader (`--data_loader_engine nvtabular`) for parquet files. 
-- `containers/Dockerfile.dev` (GPU or CPU) - Supports only [PyArrow](https://github.com/apache/arrow/) (`--data_loader_engine pyarrow`) or [Petastorm](https://petastorm.readthedocs.io) (`--data_loader_engine petastorm`) data loaders. Will use GPU for training if available, otherwise CPU.
-
-
-*Example commands:*
-
-```bash
-#Build the image
-docker build --no-cache -t hf4rec_dev -f container/Dockerfile.dev_nvt .
-
-#Run the image in the interactive mode
-docker run --gpus all --ipc=host -it --rm --cap-add=SYS_ADMIN --shm-size=2g --ulimit memlock=-1 --ulimit stack=67108864  \
- -p 6006:6006 -p 8888:8888 -v ~/projects/rapidsai/hf4rec:/workspace -v ~/dataset/:/data --workdir /workspace/ hf4rec_dev /bin/bash 
-```
-
-For more advanced instructions with Docker check the [`containers`](../containers/README.md) folder.
-
 
 
 ### Weights & Biases logging setup
