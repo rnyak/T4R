@@ -4,11 +4,9 @@ Here, we report the hyperparameter search space that is set and explored for eac
 
 ## Source code and Datasets
 
-The full source code of the frameworks can be found here: 
+The full source code of the frameworks can be found under the APPENDIX_A-Source_code folder.
 
-https://github.com/rnyak/T4R/tree/main/codes
-
-The datasets used in the experiments can be downloaded here: <br>
+The datasets used in the experiments can be downloaded from the following sites: <br>
 
 - https://www.kaggle.com/mkechinov/ecommerce-behavior-data-from-multi-category-store <br>
 - https://2015.recsyschallenge.com/challenge.html <br>
