@@ -9,15 +9,21 @@ The sessions are divided in time windows, according to the unit: one day for e-c
 We also explore the usage of side features by Transformers architectures (RQ3). The following table presents the additional features other than the item id and their feature engineering that were used to by our experiments to address RQ3, which explores different techniques to include side information into Transformers.
 It is worthwhile to note that the YOOCHOOSE dataset have a single categorical feature (category), but it is inconsistent over time in the dataset. All interactions before day 84 (2014-06-23) have the same value for that feature, when many other categories are introduced. Under the incremental evaluation protocol, this drops significantly the model accuracy for the early subsequent days so we cannot use that feature for our purpose. As there was no other categorical feature left for the YOOCHOOSE dataset, we decided not including it for the analysis of RQ3.
 
-<center>Table 3. Datasets feature engineering</center>
-
-
-Features/Dataset| REES46 eCommerce | G1 news | Adressa news | Preprocessing techniques |
---- | --- | --- | --- |--- |
-Categorical features| category, subcategory, brand | User context features: region, country, environment, device group, OS | category, subcategory, author and user context features: city, region, country, device, OS, referrer |Discrete encoding as contiguous ids |
-Item recency features | item age in days (log) | item age in hours| item age in hours |Standardization for the e-commerce datasets and GaussRank for the news datasets |
-Temporal features | hour of the day, day of the week | hour of the day, day of the week | hour of the day, day of the week | Cyclical continuous features (using sine and cosine|
-Other continuous features |  price, relative price to the average of category |-| - |Standardization|
+<!DOCTYPE html>
+<html>
+<body>
+<br>
+ <h4>Table 3. Datasets feature engineering</h4>
+<font size="2" face="Arial" >
+<table class="hp-table">
+<thead><tr class="table-firstrow"><th></th><th>REES46 eCommerce</th><th>G1 news</th><th>Adressa news</th><th>Preprocessing techniques</th></tr></thead><tbody>
+ <tr><td>Categorical features</td><td>category, subcategory, brand</td><td>User context features: region, country, environment, device group, OS</td><td>category, subcategory, author and user context features: city, region, country, device, OS, referrer</td><td>Discrete encoding as contiguous ids</td></tr>
+ <tr><td>Item recency features</td><td>item age in days (log)</td><td colspan=2><p align="center">item age in hours</p></td><td>Standardization for the e-commerce datasets and GaussRank for the news datasets</td></tr>
+ <tr><td>Temporal features</td><td colspan=3><p align="center">hour of the day, day of the week</p></td><td>Cyclical continuous features (usingsine and cosine)</td></tr>
+ <tr><td>Other continuous features</td><td>price, relative price to the average of category</td><td><p align="center">-</p></td><td><p align="center">-</p></td><td>Standardization</td></tr>
+</tbody></table>
+ </body>
+</html>
 
 **References**  
 [1] Malte, Ludewig, et al. "Empirical analysis of session-based recommendation algorithms." (2020): 1-33.  
