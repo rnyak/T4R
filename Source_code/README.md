@@ -23,5 +23,5 @@ Differently from most implementations of Transformers for RecSys, which use only
 
 # Project Organization
 
-- [`hf4rec`](/Source_code/hf4rec/README.md) - Here are the main scripts for train and evaluating of Transformer-based RecSys models. The train and evaluation pipelines are PyTorch-based. 
+- [`transformers4rec`](/Source_code/hf4rec/README.md) - Here are the main scripts for train and evaluating of Transformer-based RecSys models. The train and evaluation pipelines are PyTorch-based. 
 - [`datasets`](/Source_code/datasets/) - Resources for each dataset used in the experiments, including preprocessing scripts and config files of the available features for the models.
