@@ -13,12 +13,6 @@ As this is a large dataset, its pre-processing was implemented mostly using PySp
 
 The notebooks for pre-processing can be found in the [ecommerce_rees46/preprocessing/pyspark/](ecommerce_rees46/preprocessing/pyspark/) folder and must be executed in the order of the notebooks prefixes (01, 02, and 03).
 
-### Preprocessed dataset
-
-An already pre-processed version of this dataset comprising 1 month of data (October 2019) is available in this [Google Drive](https://drive.google.com/drive/u/0/folders/1LK24lJYn2mLUM2710iS5L6Pq9gGyj2_s).  
-With this pre-processed dataset, you are able to run pipelines with Transformers4Rec.
-
-
 ## G1 news dataset
 
 This is a dataset with users interactions logs (page views) from the [G1](https://g1.globo.com/), the most popular news portal in Brazil, which was provided by Globo.com.
@@ -32,14 +26,6 @@ The raw datasets and more info can be found on [Kaggle Datasets](https://www.kag
 AS this dataset is not very large, the preprocessing for this dataset was implemented using Pandas. In general, the user interactions are split into sessions, and sessions are saved in parquet files. The parquet files are split by hour, to allow incremental training and evaluation.  
 
 The preprocessing notebook can be found in the [news_g1/preprocessing/G1_news_preprocess.ipynb](news_g1/preprocessing/G1_news_preprocess.ipynb) folder.
-
-
-
-### Preprocessed dataset
-
-An already pre-processed version of this dataset is available in this [Google Drive](https://drive.google.com/drive/u/0/folders/1qSUWRqBflR8EvMKoyLIkSyB3JlwNPNTT).  
-With this pre-processed dataset, you are able to run pipelines with Transformers4Rec.
-
 
 ## Features config files
 The Transformers4Rec uses a features config file (YAML) to get to know which features are available for the model. The only required feature is the one that contains the sequence of item ids. But more features can be provided, like item metadata /content features and user contextual features, generally improving models accuracy.
