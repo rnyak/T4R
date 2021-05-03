@@ -1,6 +1,8 @@
+# Appendix B - Datasets Preprocessing and Feature Engineering
+
 First, the user interactions are grouped by sessions. All datasets provide session ids, except the ADRESSA dataset, for which we artificially split sessions to have a maximum idle time of 30 minutes between the user interactions.
 
-Repeated user interactions on the same items within sessions are removed from news dataset, as they do not provide information gain. For the e-commerce domain, repeated interactions are common when users are comparing products and recommending items already interacted can be helpful from a user’s perspective e.g., as reminders [malte2020empirical, jannach2017session, lerche2016value, ren2019repeatnet]. Thus we remove consecutive interactions in the same items, but allow them to be interleaved, e.g. the sequence of interacted items 𝑎𝑎𝑎𝑏𝑐𝑐𝑎 becomes 𝑎𝑏𝑐𝑎. We remove sessions with length 1, and truncate sessions up to the maximum of 20 interactions.
+Repeated user interactions on the same items within sessions are removed from news dataset, as they do not provide information gain. For the e-commerce domain, repeated interactions are common when users are comparing products and recommending items already interacted can be helpful from a user’s perspective e.g., as reminders [1,2,3,4]. Thus we remove consecutive interactions in the same items, but allow them to be interleaved, e.g. the sequence of interacted items 𝑎𝑎𝑎𝑏𝑐𝑐𝑎 becomes 𝑎𝑏𝑐𝑎. We remove sessions with length 1, and truncate sessions up to the maximum of 20 interactions.
 
 The sessions are divided in time windows, according to the unit: one day for e-commerce datasets and one hour for the news datasets. The reason for is that interactions in the news domain are very biased toward recent items. For example, in G1 news, 50% and 90% of interactions are performed on articles published within up to 11 hours and 20hours, respectively. So, training those types of algorithms on a daily basis would not be effective for recommending fresh articles, as they would not be included in the train set.
 
@@ -17,3 +19,8 @@ Item recency features | item age in days (log) | item age in hours| |Standardiza
 Temporal features |  | hour of the day, day of the week | .. | Cyclical continuous features (using sine and cosine|
 Other continuous features |  price, relative price to the average of category |-| - |Standardization|
 
+**References**  
+[1] Malte, Ludewig, et al. "Empirical analysis of session-based recommendation algorithms." (2020): 1-33.  
+[2] Jannach, Dietmar, Malte Ludewig, and Lukas Lerche. "Session-based item recommendation in e-commerce: on short-term intents, reminders, trends and discounts." User Modeling and User-Adapted Interaction 27.3 (2017): 351-392.  
+[3] Lerche, Lukas, Dietmar Jannach, and Malte Ludewig. "On the value of reminders within e-commerce recommendations." Proceedings of the 2016 Conference on User Modeling Adaptation and Personalization. 2016.  
+[4] Ren, Pengjie, et al. "Repeatnet: A repeat aware neural recommendation machine for session-based recommendation." Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 33. No. 01. 2019.  
