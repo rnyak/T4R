@@ -2,16 +2,20 @@
 
 In this appendix we provide the detailed search space utilized for hyperparameter tuning and the best hyperparameters found for each experiment group (composed by algorithm, training approach and dataset).
 
-- [Hypertuning Search Space](#Hypertuning-Search-Space)
-- [Best Hyperparameters per Algorithm](#Best-Hyperparameters-per-Algorithm)
+* [Hypertuning Search Space](#Hypertuning-Search-Space)
+    * [Table 1. Algorithms using the Transformers4Rec Meta-Architecture](#Table-1.-Algorithms-using-the-Transformers4Rec-Meta-Architecture:-Transformers-and-GRU-baseline)
+* [Best Hyperparameters per Algorithm](#Best-Hyperparameters-per-Algorithm)
+    * [GRU](#GRU)
+    * [GPT2](#GPT2)
+    * (TransformerXL)(#TransformerXL)
+    * [XLNet - CLM](#XLNet-CausalLM)
+
 
 ## Hypertuning Search Space
-
+### Table 1. Algorithms using the Transformers4Rec Meta-Architecture: Transformers and GRU baseline
 <!DOCTYPE html>
 <html>
 <body>
-<br>
-<h3>Table 1. Algorithms using the Transformers4Rec Meta-Architecture: Transformers and GRU baseline</h3>
 <table class="hp-table">
 <thead><tr class="table-firstrow"><th>Experiment Group </th><th>Type </th><th>Hyperparameter Name</th><th>Search space</th><th>Sampling Distribution</th></tr><thead><tbody>
  <tr><td rowspan=30>Common parameters </td><td rowspan=18>fixed</td><td>inp_merge</td><td>mlp</td><td><center>-</center></td></tr>
@@ -138,3 +142,5 @@ In this appendix we provide the detailed search space utilized for hyperparamete
 </body>
 </html>
 * Where L is the average session length
+
+## Best Hyperparameters per Algorithm
