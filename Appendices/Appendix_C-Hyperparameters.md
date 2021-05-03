@@ -41,6 +41,7 @@ In this appendix we provide the detailed search space utilized for hyperparamete
  <tr><td>label_smoothing</td><td>[0, 0.9]</td><td>discrete_uniform (step 0.1)</td></tr>
  <tr><td>item_id_embeddings_init_std</td><td>[0.01, 0.15]</td><td>discrete_uniform (step 0.02)</td></tr>
  <tr><td>other_embeddings_init_std</td><td>[0.005, 0.1]</td><td>discrete_uniform (step 0.005)</td></tr>
+ <tr><td>GRU</td><td>hypertuning</td><td>stochastic_shared_embeddings_replacement_prob</td><td>[0.0, 0.1]</td><td>discrete_uniform (step 0.02)</td></tr>
  <tr><td>GPT2</td><td>hypertuning</td><td>stochastic_shared_embeddings_replacement_prob</td><td>[0.0, 0.1]</td><td>discrete_uniform (step 0.02)</td></tr>
  <tr><td>TransformerXL</td><td>hypertuning</td><td>stochastic_shared_embeddings_replacement_prob</td><td>[0.0, 0.1]</td><td>discrete_uniform (step 0.02)</td></tr>
  <tr><td rowspan=2>XLNet-CausalLM</td><td>fixed</td><td>attn_type</td><td>uni</td><td><center>-</center></td></tr>
@@ -72,7 +73,6 @@ In this appendix we provide the detailed search space utilized for hyperparamete
 </tbody></table>
 <br>
 <h3>Table 2. XLNet (MLM) - Additional hyperparameters when using side information</h3>
-<font size="2" face="Arial" >
 <table class="hp-table">
 <thead><tr class="table-firstrow"><th>Experiment Group </th><th>Type </th><th>Hyperparameter Name</th><th>Search Space</th><th>Sampling Distribution</th></tr></thead><tbody>
  <tr><td rowspan=3>Common hyperparameters</td><td>fixed</td><td>layer_norm_all_features</td><td>FALSE</td><td><center>-</center></td></tr>
