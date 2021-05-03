@@ -17,4 +17,4 @@ Appendices:
 
 - [Appendix A - Techniques used in Transformers4Rec Meta-Architecture](Appendices/Appendix_A-Techniques_used_in_Transformers4Rec_Meta-Architecture.md)
 - [Appendix B - Preprocessing and Feature Engineering](Appendices/Appendix_B-Preprocessing_and_Feature_Engineering.md)
-- [Appendix C - Hyperparameters](Appendices/Appendix_C-Hyperparameters.md)
+- [Appendix C - Hypertuning - Search space and best hyperparameters](Appendices/Appendix_C-Hyperparameters.md)
