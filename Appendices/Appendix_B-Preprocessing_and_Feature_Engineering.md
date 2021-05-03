@@ -15,8 +15,8 @@ It is worthwhile to note that the YOOCHOOSE dataset have a single categorical fe
 Features/Dataset| REES46 eCommerce | G1 news | Adressa news | Preprocessing techniques |
 --- | --- | --- | --- |--- |
 Categorical features| category, subcategory, brand | User context features: region, country, environment, device group, OS | category, subcategory, author and user context features: city, region, country, device, OS, referrer |Discrete encoding as contiguous ids |
-Item recency features | item age in days (log) | item age in hours| |Standardization for the e-commerce datasets and GaussRank for the news datasets |
-Temporal features |  | hour of the day, day of the week | .. | Cyclical continuous features (using sine and cosine|
+Item recency features | item age in days (log) | item age in hours| item age in hours |Standardization for the e-commerce datasets and GaussRank for the news datasets |
+Temporal features | hour of the day, day of the week | hour of the day, day of the week | hour of the day, day of the week | Cyclical continuous features (using sine and cosine|
 Other continuous features |  price, relative price to the average of category |-| - |Standardization|
 
 **References**  
