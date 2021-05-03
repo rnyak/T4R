@@ -4,8 +4,8 @@
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate transf4rec
 
-cd hf4rec/
-TOKENIZERS_PARALLELISM=false CUDA_VISIBLE_DEVICES=0 python3 -m Transformer4rec.recsys_main \
+cd transformers4rec/
+TOKENIZERS_PARALLELISM=false CUDA_VISIBLE_DEVICES=0 python3 -m transformers4rec.recsys_main \
     --output_dir "./tmp/" \
     --overwrite_output_dir \
     --do_train \
