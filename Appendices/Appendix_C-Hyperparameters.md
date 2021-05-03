@@ -8,7 +8,7 @@ In this appendix we provide the detailed search space utilized for hyperparamete
 <html>
 <body>
 <br>
-<h3>Table 1. Transformers</h3>
+<h3>Table 1. Algorithms using the Transformers4Rec Meta-Architecture: Transformers and GRU baseline</h3>
 <table class="hp-table">
 <thead><tr class="table-firstrow"><th>Experiment Group </th><th>Type </th><th>Hyperparameter Name</th><th>Search space</th><th>Sampling Distribution</th></tr><thead><tbody>
  <tr><td rowspan=30>Common parameters </td><td rowspan=18>fixed</td><td>inp_merge</td><td>mlp</td><td><center>-</center></td></tr>
@@ -71,7 +71,7 @@ In this appendix we provide the detailed search space utilized for hyperparamete
  <tr><td>mlm_probability</td><td>[0, 0.7]</td><td>discrete_uniform (step 0.1)</td></tr>
 </tbody></table>
 <br>
-<h3>Table 2. Transformers (Additional hyperparameters when using side information)</h3>
+<h3>Table 2. XLNet (MLM) - Additional hyperparameters when using side information</h3>
 <font size="2" face="Arial" >
 <table class="hp-table">
 <thead><tr class="table-firstrow"><th>Experiment Group </th><th>Type </th><th>Hyperparameter Name</th><th>Search Space</th><th>Sampling Distribution</th></tr></thead><tbody>
