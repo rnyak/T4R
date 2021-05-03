@@ -1,18 +1,8 @@
-#  Hyperparameter Tuning
+#  Appendix C - Hypertuning - Search space and best hyperparameters
 
-Here, we report the hyperparameter search space that is set and explored for each experiment.
+In this appendix we provide the detailed search space utilized for hyperparameter tuning and the best hyperparameters found for each experiment group (composed by algorithm, training approach and dataset).
 
-## Source code and Datasets
-
-- The full source code of the frameworks can be found under the APPENDIX_A-Source_code folder.
-
-- The datasets used in the experiments can be downloaded from the following sites: <br>
-
-  - https://www.kaggle.com/mkechinov/ecommerce-behavior-data-from-multi-category-store <br>
-  - https://2015.recsyschallenge.com/challenge.html <br>
-  - https://www.kaggle.com/gspmoreira/news-portal-user-interactions-by-globocom <br>
-  - http://reclab.idi.ntnu.no/dataset/
-
+## Hypertuning Search Space
 
 <!DOCTYPE html>
 <html>
