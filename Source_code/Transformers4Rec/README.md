@@ -6,9 +6,9 @@ This folder has the code for training and evaluating Transformer-based architect
 
 We use the follow ingredients to implement RecSys-Transformer pipelines:
 - Trainer and Transformer models implementation for PyTorch: [HuggingFace (HF) transformers library](https://huggingface.co/transformers/)
-- Data Loaders to read input Parquet files: [NVIDIA NVTabular](https://github.com/NVIDIA/NVTabular/), [PyArrow](https://github.com/apache/arrow/), or [Petastorm](https://petastorm.readthedocs.io)
+- Data Loaders to read input Parquet files: [NVTabular](https://github.com/NVIDIA/NVTabular/), [PyArrow](https://github.com/apache/arrow/), or [Petastorm](https://petastorm.readthedocs.io)
 - RecSys evaluation metrics: [karlhigley's implementation](https://github.com/karlhigley/ranking-metrics-torch)
-- Logging: [Weights & Biases (W&B)](https://wandb.ai/), [Tensorboard](https://www.tensorflow.org/tensorboard) and [NVIDIA DLLogger](https://github.com/NVIDIA/dllogger)
+- Logging: [Weights & Biases (W&B)](https://wandb.ai/), [Tensorboard](https://www.tensorflow.org/tensorboard) and [DLLogger](https://github.com/NVIDIA/dllogger)
 
 
 ## Enviroment Setup
@@ -146,7 +146,7 @@ The following output files will be saved in the path defined by the `--output_di
 - `eval_results_avg_over_days.txt` - Final metrics Averaged Over Time (AOT) in human-readable format
 - `train_results_over_time.txt` and `eval_results_over_time.txt` - Metric results for each training and evaluation day in human-readable format.
 - `eval_train_results.csv` - Metric results for each training and evaluation day in a machine-readable format (CSV)
-- `log.json` - Output metrics in the DLLoger format. Used to retrieve the final metrics by an NVIDIA internal hypertuning tool (AutoBench).
+- `log.json` - Output metrics in the DLLoger format.
 - `pred_logs/` - Folder created with logged predictions and metrics during evaluation when `--log_predictions` is enabled
 - `attention_weights/` - Folder created with logged Transformer''s attention weights during evaluation when `--log_attention_weights` is enabled
 
