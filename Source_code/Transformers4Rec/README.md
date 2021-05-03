@@ -30,7 +30,7 @@ pip install -r requirements.txt
 
 #### **Visual Studio Code setup**
 To be able to run and debug the pipeline using Visual Studio Code:
-- Click in *File / Open Folder*, selecting the root `hf4rec` folder
+- Click in *File / Open Folder*, selecting the root `transformers4rec` folder
 - Create a hidden folder `.vscode` within that root folder and copy there an example of the VS Code launch config, available in `resources/dev_env/vscode/launch.json`
 - Now, in the Run tab on the left VS Code bar, you can select one of the example configurations (defined in `launch.json`) and run/debug the code.
 
@@ -65,7 +65,7 @@ You can find information on the example available datasets, and instructions on 
 The following command runs the pipeline using `torch.nn.DataParallel()` (default) to make the pipeline data parallel. In this setting, the dataloader loads a batch from a dataset and splits it to the different GPUs using multi-threading that processes those chuncks of data in parallel.  
 
 ```bash
-TOKENIZERS_PARALLELISM=false CUDA_VISIBLE_DEVICES=0 python3 -m hf4rec.recsys_main \
+TOKENIZERS_PARALLELISM=false CUDA_VISIBLE_DEVICES=0 python3 -m transformers4rec.recsys_main \
     --output_dir "./tmp/" \
     --overwrite_output_dir \
     --do_train \
