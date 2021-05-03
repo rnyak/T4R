@@ -2,6 +2,9 @@
 
 In this appendix we provide the detailed search space utilized for hyperparameter tuning and the best hyperparameters found for each experiment group (composed by algorithm, training approach and dataset).
 
+- [Hypertuning Search Space](#Hypertuning-Search-Space)
+- [Best Hyperparameters per Algorithm](#Best-Hyperparameters-per-Algorithm)
+
 ## Hypertuning Search Space
 
 <!DOCTYPE html>
