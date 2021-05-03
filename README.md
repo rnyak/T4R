@@ -8,7 +8,7 @@ In order to demonstrate the usefulness of the library in a research setting and 
 
 ## Appendices Organization
 
-[`Source_Code`](Source_code) section includes:
+[`Source_Code`](Source_code/README.md) section includes:
 - The instructions on how to setup and run the Transformers4Rec framework
 - The main scripts for train and evaluating of Transformer-based RecSys models. The train and evaluation pipelines are PyTorch-based.
 - Resources for each dataset used in the experiments, including preprocessing scripts and config files of the available features for the models.
