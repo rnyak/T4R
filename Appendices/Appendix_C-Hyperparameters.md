@@ -5,8 +5,11 @@ In this appendix we provide the detailed search space utilized for hyperparamete
 * [Hypertuning Search Space](#Hypertuning-Search-Space)
 * [Best Hyperparameters per Algorithm](#Best-Hyperparameters-per-Algorithm)
     * Baselines
-       * [GRU4REC](#GRU4REC)
+       * [GRU4REC (FT)](#GRU4REC-(FT))
+       * [GRU4REC (SWT)](#GRU4REC-(SWT))
        * [V-SkNN](#V-SkNN)
+       * [STAN](#STAN)
+       * [VSTAN](#VSTAN)
     * Transformers with only item id feature
        * [GRU](#GRU)
        * [GPT2](#GPT2)
@@ -158,9 +161,42 @@ In this appendix we provide the detailed search space utilized for hyperparamete
 
 ## Baselines
 
-### GRU4REC
+### GRU4REC (FT)
+
+<table class="table-table">
+<thead><tr class="table-firstrow"><th>Hyperparameters</th><th>REES46 eCommerce</th><th>YOOCHOOSE eCommerce</th><th>G1 news</th><th>ADRESSA news</th></tr></thead><tbody>
+ <tr><td>gru4rec-batch_size</td><td>192</td><td>128</td><td>512</td><td>320</td></tr>
+ <tr><td>gru4rec-learning_rate</td><td>0.02987583</td><td>0.04835963206</td><td>0.003390859922</td><td>0.006776399704</td></tr>
+ <tr><td>gru4rec-dropout_p_hidden</td><td>0.2</td><td>0.3</td><td>0.4</td><td>0.1</td></tr>
+ <tr><td>gru4rec-layers</td><td>384</td><td>320</td><td>448</td><td>448</td></tr>
+ <tr><td>gru4rec-embedding</td><td>384</td><td>256</td><td>320</td><td>256</td></tr>
+ <tr><td>gru4rec-constrained_embedding</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+ <tr><td>gru4rec-momentum</td><td>0.0063542217809</td><td>0.0240110233654</td><td>0.0033795343757</td><td>0.0227154672843</td></tr>
+ <tr><td>gru4rec-final_act</td><td>linear</td><td>linear</td><td>tanh</td><td>tanh</td></tr>
+ <tr><td>gru4rec-loss</td><td>bpr-max</td><td> top1-max</td><td> bpr-max</td><td>top1-max</td></tr>
+</tbody></table>
+
+### GRU4REC (SWT)
+
+<table class="table-table">
+<thead><tr class="table-firstrow"><th>Hyperparameters</th><th>REES46 eCommerce</th><th>YOOCHOOSE eCommerce</th><th>G1 news</th><th>ADRESSA news</th></tr></thead><tbody>
+ <tr><td>gru4rec-batch_size</td><td>256</td><td>128</td><td>192</td><td>512</td></tr>
+ <tr><td>gru4rec-learning_rate</td><td>0.09985796371</td><td>0.02551529973</td><td>0.003728175</td><td>0.006604778881</td></tr>
+ <tr><td>gru4rec-dropout_p_hidden</td><td>0.0</td><td>0.2</td><td>0.3</td><td>0.1</td></tr>
+ <tr><td>gru4rec-layers</td><td>320</td><td>384</td><td>384</td><td>448</td></tr>
+ <tr><td>gru4rec-embedding</td><td>256</td><td>320</td><td>64</td><td>320</td></tr>
+ <tr><td>gru4rec-constrained_embedding</td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+ <tr><td>gru4rec-momentum</td><td>0.0080778576522</td><td>0.0141954218043</td><td>0.0235705315583</td><td>0.0131644109509</td></tr>
+ <tr><td>gru4rec-final_act</td><td>linear</td><td>linear</td><td>tanh</td><td>tanh</td></tr>
+ <tr><td>gru4rec-loss</td><td> top1-max</td><td>bpr-max </td><td>top1-max</td><td>top1-max</td></tr>
+ <tr><td>training_time_window_size</td><td>6</td><td>36</td><td>72</td><td>72</td></tr>
+</tbody></table>
 
 ### V-SkNN
+
+### STAN
+
+### VSTAN
 
 ## Transformers with only item id feature
 
