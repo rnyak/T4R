@@ -16,7 +16,7 @@ In this appendix we provide the detailed search space utilized for hyperparamete
 
 
 ## Hypertuning Search Space
-### Table 1. Algorithms using the Transformers4Rec Meta-Architecture: Transformers and GRU baseline
+### Table 1. Algorithms using the Transformers4Rec Meta-Architecture - Transformers and GRU baseline - using only the item id feature
 <!DOCTYPE html>
 <html>
 <body>
@@ -51,7 +51,6 @@ In this appendix we provide the detailed search space utilized for hyperparamete
  <tr><td>per_device_train_batch_size</td><td>[128, 512]</td><td>int_uniform (steps 64)</td></tr>
  <tr><td>label_smoothing</td><td>[0, 0.9]</td><td>discrete_uniform (step 0.1)</td></tr>
  <tr><td>item_id_embeddings_init_std</td><td>[0.01, 0.15]</td><td>discrete_uniform (step 0.02)</td></tr>
- <tr><td>other_embeddings_init_std</td><td>[0.005, 0.1]</td><td>discrete_uniform (step 0.005)</td></tr>
  <tr><td>GRU</td><td>hypertuning</td><td>stochastic_shared_embeddings_replacement_prob</td><td>[0.0, 0.1]</td><td>discrete_uniform (step 0.02)</td></tr>
  <tr><td>GPT2</td><td>hypertuning</td><td>stochastic_shared_embeddings_replacement_prob</td><td>[0.0, 0.1]</td><td>discrete_uniform (step 0.02)</td></tr>
  <tr><td>TransformerXL</td><td>hypertuning</td><td>stochastic_shared_embeddings_replacement_prob</td><td>[0.0, 0.1]</td><td>discrete_uniform (step 0.02)</td></tr>
@@ -164,7 +163,6 @@ In this appendix we provide the detailed search space utilized for hyperparamete
  <tr><td>per_device_train_batch_size</td><td>448</td><td>384</td><td>192</td><td>192</td></tr>
  <tr><td>label_smoothing</td><td>0.3</td><td>0.5</td><td>0.7</td><td>0.9</td></tr>
  <tr><td>item_id_embeddings_init_std</td><td>0.09</td><td>0.15</td><td>0.11</td><td>0.11</td></tr>
- <tr><td>other_embeddings_init_std</td><td>0.095</td><td>0.01</td><td>0.035</td><td>0.085</td></tr>
 </tbody></table>
 
 
@@ -184,7 +182,6 @@ In this appendix we provide the detailed search space utilized for hyperparamete
  <tr><td>per_device_train_batch_size</td><td>384</td><td>320</td><td>&nbsp;</td><td>192</td></tr>
  <tr><td>label_smoothing</td><td>0.9</td><td>0.2</td><td>&nbsp;</td><td>0.3</td></tr>
  <tr><td>item_id_embeddings_init_std</td><td>0.03</td><td>0.05</td><td>&nbsp;</td><td>0.07</td></tr>
- <tr><td>other_embeddings_init_std</td><td>0.0350</td><td>0.05</td><td>&nbsp;</td><td>0.1</td></tr>
 </tbody></table>
 
 ### TransformerXL
@@ -203,7 +200,6 @@ In this appendix we provide the detailed search space utilized for hyperparamete
  <tr><td>per_device_train_batch_size</td><td>512</td><td>&nbsp;</td><td>192</td><td>128</td></tr>
  <tr><td>label_smoothing</td><td>0.2</td><td>&nbsp;</td><td>0.3</td><td>0.1</td></tr>
  <tr><td>item_id_embeddings_init_std</td><td>0.15</td><td>&nbsp;</td><td>0.03</td><td>0.15</td></tr>
- <tr><td>other_embeddings_init_std</td><td>0.01</td><td>&nbsp;</td><td>0.03</td><td>0.095</td></tr>
 </tbody></table>
 
 ### XLNet-CausalLM
@@ -223,7 +219,6 @@ In this appendix we provide the detailed search space utilized for hyperparamete
  <tr><td>per_device_train_batch_size</td><td>192</td><td>384</td><td>320</td><td>192</td></tr>
  <tr><td>label_smoothing</td><td>0.1</td><td>0.6</td><td>0.3</td><td>0.3</td></tr>
  <tr><td>item_id_embeddings_init_std</td><td>0.13</td><td>0.09</td><td>0.13</td><td>0.13</td></tr>
- <tr><td>other_embeddings_init_std</td><td>0.01</td><td>0.01</td><td>0.075</td><td>0.015</td></tr>
 </tbody></table>
 
 ### XLNet-MLM
@@ -242,7 +237,6 @@ In this appendix we provide the detailed search space utilized for hyperparamete
  <tr><td>per_device_train_batch_size</td><td>192</td><td>384</td><td>128</td><td>192</td></tr>
  <tr><td>label_smoothing</td><td>0.0</td><td>0.6</td><td>0.3</td><td>0.2</td></tr>
  <tr><td>item_id_embeddings_init_std</td><td>0.11</td><td>0.09</td><td>0.15</td><td>0.15</td></tr>
- <tr><td>other_embeddings_init_std</td><td>0.02</td><td>0.045</td><td>0.075</td><td>0.04</td></tr>
  <tr><td>mlm_probability</td><td>0.3</td><td>0.3</td><td>0.3</td><td>0.2</td></tr>
 </tbody></table>
 
@@ -263,7 +257,6 @@ In this appendix we provide the detailed search space utilized for hyperparamete
  <tr><td>per_device_train_batch_size</td><td>320</td><td>384</td><td>192</td><td>192</td></tr>
  <tr><td>label_smoothing</td><td>0.7</td><td>0.5</td><td>0.8</td><td>0.2</td></tr>
  <tr><td>item_id_embeddings_init_std</td><td>0.13</td><td>0.11</td><td>0.07</td><td>0.11</td></tr>
- <tr><td>other_embeddings_init_std</td><td>0.005</td><td>0.09</td><td>0.1</td><td>0.09</td></tr>
  <tr><td>plm_max_span_length</td><td>3</td><td>4</td><td>4</td><td>2</td></tr>
  <tr><td>plm_probability</td><td>0.5</td><td>0.7</td><td>0.5</td><td>0.4</td></tr>
 </tbody></table>
@@ -287,7 +280,6 @@ In this appendix we provide the detailed search space utilized for hyperparamete
  <tr><td>per_device_train_batch_size</td><td>320</td><td>320</td><td>128</td><td>256</td></tr>
  <tr><td>label_smoothing</td><td>0.5</td><td>0.8</td><td>0.5</td><td>0.3</td></tr>
  <tr><td>item_id_embeddings_init_std</td><td>0.09</td><td>0.09</td><td>0.15</td><td>0.05</td></tr>
- <tr><td>other_embeddings_init_std</td><td>0.02</td><td>0.08</td><td>0.025</td><td>0.06</td></tr>
  <tr><td>rtd_discriminator_loss_weight</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
  <tr><td>mlm_probability</td><td>0.4</td><td>0.2</td><td>0.3</td><td>0.3</td></tr>
 </tbody></table>
@@ -308,7 +300,6 @@ In this appendix we provide the detailed search space utilized for hyperparamete
  <tr><td>per_device_train_batch_size</td><td>192</td><td>512</td><td>128</td><td>192</td></tr>
  <tr><td>label_smoothing</td><td>0.2</td><td>0.3</td><td>0.7</td><td>0.2</td></tr>
  <tr><td>item_id_embeddings_init_std</td><td>0.11</td><td>0.07</td><td>0.15</td><td>0.15</td></tr>
- <tr><td>other_embeddings_init_std</td><td>0.025</td><td>0.055</td><td>0.01</td><td>0.03</td></tr>
  <tr><td>mlm_probability</td><td>0.6</td><td>0.3</td><td>0.2</td><td>0.4</td></tr>
  <tr><td>num_hidden_groups</td><td>-1</td><td>-1</td><td>-1</td><td>-1</td></tr>
  <tr><td>inner_group_num</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
