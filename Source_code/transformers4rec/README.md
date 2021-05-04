@@ -28,13 +28,6 @@ conda install -c rapidsai -c nvidia -c numba -c conda-forge -c defaults cudf=0.1
 pip install -r requirements.txt
 ```
 
-#### **Visual Studio Code setup**
-To be able to run and debug the pipeline using Visual Studio Code:
-- Click in *File / Open Folder*, selecting the root `transformers4rec` folder
-- Create a hidden folder `.vscode` within that root folder and copy there an example of the VS Code launch config, available in `resources/dev_env/vscode/launch.json`
-- Now, in the Run tab on the left VS Code bar, you can select one of the example configurations (defined in `launch.json`) and run/debug the code.
-
-
 ### Weights & Biases logging setup
 
 By default, Huggingface uses [Weights & Biases (W&B)](https://wandb.ai/) to log training and evaluation metrics.
