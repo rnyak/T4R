@@ -1,6 +1,9 @@
 #  Appendix C - Hypertuning - Search space and best hyperparameters
 
-In this appendix we provide the detailed search space utilized for hyperparameter tuning and the best hyperparameters found for each experiment group (composed by algorithm, training approach and dataset).
+In this appendix we provide 
+    - average runtime in minutes of the 100 hypertuning trials by algorithm and dataset
+    - the detailed search space utilized for hyperparameter tuning and the best hyperparameters found for each experiment group (composed by algorithm, training approach and dataset).
+<br>
 
 * [Average runtime (in minutes) of the 100 hypertuning trials by algorithm and dataset](#Table-1.-Average-runtime-(in-minutes)-of-the-100-hypertuning-trials-by-algorithm-and-dataset)
 * [Hypertuning Search Space](#Hypertuning-Search-Space)
@@ -27,8 +30,8 @@ In this appendix we provide the detailed search space utilized for hyperparamete
        * [XLNet-MLM-all-elementwise](#XLNet-MLM-all-elementwise)
 
 #### Table 1. Average runtime (in minutes) of the 100 hypertuning trials by algorithm and dataset
-<table class="tableizer-table">
-<thead><tr class="tableizer-firstrow"><th colspan=2>&nbsp;</th><th colspan=2>REES46 eCommerce</th><th colspan=2>YOOCHOOSE eCommerce</th><th colspan=2>G1 news</th><th colspan=2>ADRESSA news</th></tr></thead><tbody>
+<table class="table-table">
+<thead><tr class="table-firstrow"><th colspan=2>&nbsp;</th><th colspan=2>REES46 eCommerce</th><th colspan=2>YOOCHOOSE eCommerce</th><th colspan=2>G1 news</th><th colspan=2>ADRESSA news</th></tr></thead><tbody>
    <tr><td>&nbsp;</td><td><b>Number of sliding windows</b></td><td colspan=2><p align='center'>15 days</p></td><td colspan=2><p align='center'>90 days</p></td><td colspan=2>190 hours (~8 days)</td><td colspan=2>190 hours (~8 days)</td></tr>
  <tr><td>&nbsp;</td><td><b>Algorithm</b></td><td>Avg.</td><td>Std. Dev.</td><td>Avg.</td><td>Std. Dev.</td><td>Avg.</td><td>Std. Dev.</td><td>Avg.</td><td>Std. Dev.</td></tr>
  <tr><td rowspan=6>Baselines</td><td>V-SkNN</td><td>191.4</td><td>15.5</td><td>316.3</td><td>107.5</td><td>282.6</td><td>88.2</td><td>163.0</td><td>95.2</td></tr>
@@ -50,6 +53,10 @@ In this appendix we provide the detailed search space utilized for hyperparamete
  <tr><td>Element-wise merge</td><td>127.7</td><td>26.2</td><td>-</td><td>-</td><td>66.8</td><td>15.4</td><td>56.3</td><td>16.4</td></tr>
 </tbody></table>
 
+Notes:
+- Each hypertuning trial performs the full incremental training and evaluation pipeline for a number of sliding windows for each dataset, described in the first row of the spreadhseet								
+- All experiments were performed in a machine instance type with 8 CPU cores, 50 GB RAM and 1 V100 GPU with 32 GB.								
+- The training implementation of V-SkNN, STAN and VSTAN baselines is CPU-based; all other algorithms were trained on GPU. The evaluation of the Session k-NN methods and GRU4Rec was performed using CPU multi-processing, and all other algorithms were evaluated using GPU.								
 
 ## Hypertuning Search Space
 
