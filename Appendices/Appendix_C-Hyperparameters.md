@@ -207,7 +207,30 @@ In this appendix we provide the detailed search space utilized for hyperparamete
 
 ### STAN
 
+<table class="table-table">
+<thead><tr class="table-firstrow"><th>Hyperparameters</th><th>REES46 eCommerce</th><th>YOOCHOOSE eCommerce</th><th>G1 news</th><th>ADRESSA news</th></tr></thead><tbody>
+ <tr><td>stan-k</td><td>500</td><td>950</td><td>500</td><td>1850</td></tr>
+ <tr><td>stan-sample_size </td><td>10000</td><td>8000</td><td>500</td><td>500</td></tr>
+ <tr><td>stan-lambda_spw </td><td>5.49</td><td>1.00E-05</td><td>0.6725</td><td>0.355</td></tr>
+ <tr><td>stan-lambda_snh</td><td>100</td><td>5</td><td>100</td><td>5</td></tr>
+ <tr><td>stan-lambda_inh</td><td>1.3725</td><td>1.915</td><td>0.6725</td><td>0.71</td></tr>
+ <tr><td>stan-remind</td><td>True</td><td>False</td><td>False</td><td>False</td></tr>
+</tbody></table>
+
 ### VSTAN
+
+<table class="table-table">
+<thead><tr class="table-firstrow"><th>Hyperparameters</th><th>REES46 eCommerce</th><th>YOOCHOOSE eCommerce</th><th>G1 news</th><th>ADRESSA news</th></tr></thead><tbody>
+ <tr><td>vstan-k</td><td>1300</td><td>450</td><td>1250</td><td>1300</td></tr>
+ <tr><td>vstan-sample_size </td><td>8500</td><td>4500</td><td>500</td><td>1000</td></tr>
+ <tr><td>vstan-lambda_spw </td><td>5.49</td><td>9.575E-01</td><td>2.69</td><td>0.355</td></tr>
+ <tr><td>vstan-lambda_snh</td><td>80</td><td>5</td><td>80</td><td>100</td></tr>
+ <tr><td>vstan-lambda_inh</td><td>2.745</td><td>3.83</td><td>1.345</td><td>0.355</td></tr>
+ <tr><td>vstan-lambda_ipw</td><td>5.49</td><td>0.47875</td><td>0.33625</td><td>2.84</td></tr>
+ <tr><td>vstan-lambda_idf</td><td>5</td><td>1</td><td>False</td><td>False</td></tr>
+ <tr><td>vstan-remind</td><td>True</td><td>False</td><td>False</td><td>False</td></tr>
+</tbody></table>
+
 
 ## Transformers with only item id feature
 
@@ -382,8 +405,6 @@ In this appendix we provide the detailed search space utilized for hyperparamete
  <tr><td>label_smoothing</td><td>0.2</td><td>0.3</td><td>0.7</td><td>0.2</td></tr>
  <tr><td>item_id_embeddings_init_std</td><td>0.11</td><td>0.07</td><td>0.15</td><td>0.15</td></tr>
  <tr><td>mlm_probability</td><td>0.6</td><td>0.3</td><td>0.2</td><td>0.4</td></tr>
- <tr><td>num_hidden_groups</td><td>-1</td><td>-1</td><td>-1</td><td>-1</td></tr>
- <tr><td>inner_group_num</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
 </tbody></table>
 
 ## XLNET MLM with side information features
