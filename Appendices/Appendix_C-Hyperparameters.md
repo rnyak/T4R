@@ -1,8 +1,9 @@
 #  Appendix C - Hypertuning - Search space and best hyperparameters
 
 In this appendix we provide 
-    - average runtime in minutes of the 100 hypertuning trials by algorithm and dataset
-    - the detailed search space utilized for hyperparameter tuning and the best hyperparameters found for each experiment group (composed by algorithm, training approach and dataset).
+- average runtime in minutes of the 100 hypertuning trials by algorithm and dataset
+- the detailed search space utilized for hyperparameter tuning and the best hyperparameters found for each experiment group (composed by algorithm, training approach and dataset).
+
 <br>
 
 * [Average runtime (in minutes) of the 100 hypertuning trials by algorithm and dataset](#Table-1.-Average-runtime-(in-minutes)-of-the-100-hypertuning-trials-by-algorithm-and-dataset)
