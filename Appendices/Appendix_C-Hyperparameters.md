@@ -8,6 +8,11 @@ In this appendix we provide the detailed search space utilized for hyperparamete
     * [GPT2](#GPT2)
     * [TransformerXL](#TransformerXL)
     * [XLNet-CLM](#XLNet-CausalLM)
+    * [XLNet-MLM](#XLNet-MLM)
+    * [XLNet-PLM](#XLNet-PLM)
+    * [XLNet-RTD](#XLNet-RTD)
+    * [ELECTRA](#ELECTRA)
+    * [ALBERT](#ALBERT)
 
 
 ## Hypertuning Search Space
@@ -202,4 +207,90 @@ In this appendix we provide the detailed search space utilized for hyperparamete
 </tbody></table>
 
 ### XLNet-CausalLM
+
+<table class="tableizer-table">
+<thead><tr class="tableizer-firstrow"><th>Hyperparameters</th><th>REES46 eCommerce</th><th>YOOCHOOSE eCommerce</th><th>G1 news</th><th>ADRESSA news</th></tr></thead><tbody>
+ <tr><td>attn_type</td><td>uni</td><td>uni</td><td>uni</td><td>uni</td></tr>
+ <tr><td>stochastic_shared_embeddings_replacement_prob</td><td>0.08</td><td>0.06</td><td>0.1</td><td>0.0</td></tr>
+ <tr><td>d_model</td><td>320</td><td>448</td><td>128</td><td>384</td></tr>
+ <tr><td>item_embedding_dim</td><td>448</td><td>384</td><td>448</td><td>448</td></tr>
+ <tr><td>n_layer</td><td>1</td><td>2</td><td>1</td><td>1</td></tr>
+ <tr><td>n_head</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+ <tr><td>input_dropout</td><td>0.0</td><td>0.1</td><td>0.1</td><td>0.4</td></tr>
+ <tr><td>dropout</td><td>0.3</td><td>0.3</td><td>0.3</td><td>0.1</td></tr>
+ <tr><td>learning_rate</td><td>0.002029182148</td><td>0.00117833948</td><td>0.002321720478</td><td>0.0002668717028</td></tr>
+ <tr><td>weight_decay</td><td>1.52E-05</td><td>4.13E-06</td><td>8.18E-05</td><td>5.78E-06</td></tr>
+ <tr><td>per_device_train_batch_size</td><td>192</td><td>384</td><td>320</td><td>192</td></tr>
+ <tr><td>label_smoothing</td><td>0.1</td><td>0.6</td><td>0.3</td><td>0.3</td></tr>
+ <tr><td>item_id_embeddings_init_std</td><td>0.13</td><td>0.09</td><td>0.13</td><td>0.13</td></tr>
+ <tr><td>other_embeddings_init_std</td><td>0.01</td><td>0.01</td><td>0.075</td><td>0.015</td></tr>
+</tbody></table>
+
+### XLNet-MLM
+<table class="tableizer-table">
+<thead><tr class="tableizer-firstrow"><th>Hyperparameters</th><th>REES46 eCommerce</th><th>YOOCHOOSE eCommerce</th><th>G1 news</th><th>ADRESSA news</th></tr></thead><tbody>
+ <tr><td>attn_type</td><td>bi</td><td>bi</td><td>bi</td><td>bi</td></tr>
+ <tr><td>stochastic_shared_embeddings_replacement_prob</td><td>0.1</td><td>0</td><td>0.08</td><td>0</td></tr>
+ <tr><td>d_model</td><td>192</td><td>320</td><td>384</td><td>384</td></tr>
+ <tr><td>item_embedding_dim</td><td>448</td><td>448</td><td>384</td><td>384</td></tr>
+ <tr><td>n_layer</td><td>3</td><td>2</td><td>4</td><td>3</td></tr>
+ <tr><td>n_head</td><td>16</td><td>8</td><td>8</td><td>1</td></tr>
+ <tr><td>input_dropout</td><td>0.1</td><td>0.3</td><td>0</td><td>0</td></tr>
+ <tr><td>dropout</td><td>0</td><td>0</td><td>0</td><td>0.5</td></tr>
+ <tr><td>learning_rate</td><td>0.0006667377133</td><td>0.0005427417425</td><td>0.0001426544717</td><td>0.000189558907</td></tr>
+ <tr><td>weight_decay</td><td>3.91E-05</td><td>5.86E-06</td><td>8.09E-05</td><td>1.31E-05</td></tr>
+ <tr><td>per_device_train_batch_size</td><td>192</td><td>384</td><td>128</td><td>192</td></tr>
+ <tr><td>label_smoothing</td><td>0.0</td><td>0.6</td><td>0.3</td><td>0.2</td></tr>
+ <tr><td>item_id_embeddings_init_std</td><td>0.11</td><td>0.09</td><td>0.15</td><td>0.15</td></tr>
+ <tr><td>other_embeddings_init_std</td><td>0.02</td><td>0.045</td><td>0.075</td><td>0.04</td></tr>
+ <tr><td>mlm_probability</td><td>0.3</td><td>0.3</td><td>0.3</td><td>0.2</td></tr>
+</tbody></table>
+
+### XLNet-PLM
+
+<table class="tableizer-table">
+<thead><tr class="tableizer-firstrow"><th>Hyperparameters</th><th>REES46 eCommerce</th><th>YOOCHOOSE eCommerce</th><th>G1 news</th><th>ADRESSA news</th></tr></thead><tbody>
+ <tr><td>attn_type</td><td>bi</td><td>bi</td><td>bi</td><td>bi</td></tr>
+ <tr><td>stochastic_shared_embeddings_replacement_prob</td><td>0.02</td><td>0</td><td>0</td><td>0</td></tr>
+ <tr><td>d_model</td><td>384</td><td>320</td><td>256</td><td>256</td></tr>
+ <tr><td>item_embedding_dim</td><td>384</td><td>448</td><td>448</td><td>448</td></tr>
+ <tr><td>n_layer</td><td>4</td><td>1</td><td>1</td><td>1</td></tr>
+ <tr><td>n_head</td><td>16</td><td>2</td><td>1</td><td>1</td></tr>
+ <tr><td>input_dropout</td><td>0.2</td><td>0.1</td><td>0.2</td><td>0.3</td></tr>
+ <tr><td>dropout</td><td>0</td><td>0</td><td>0.1</td><td>0.1</td></tr>
+ <tr><td>learning_rate</td><td>0.0003387925502</td><td>0.0001934212295</td><td>0.0002623729053</td><td>2.32E-04</td></tr>
+ <tr><td>weight_decay</td><td>2.18E-05</td><td>7.79E-06</td><td>1.33E-06</td><td>9.32E-05</td></tr>
+ <tr><td>per_device_train_batch_size</td><td>320</td><td>384</td><td>192</td><td>192</td></tr>
+ <tr><td>label_smoothing</td><td>0.7</td><td>0.5</td><td>0.8</td><td>0.2</td></tr>
+ <tr><td>item_id_embeddings_init_std</td><td>0.13</td><td>0.11</td><td>0.07</td><td>0.11</td></tr>
+ <tr><td>other_embeddings_init_std</td><td>0.005</td><td>0.09</td><td>0.1</td><td>0.09</td></tr>
+ <tr><td>plm_max_span_length</td><td>3</td><td>4</td><td>4</td><td>2</td></tr>
+ <tr><td>plm_probability</td><td>0.5</td><td>0.7</td><td>0.5</td><td>0.4</td></tr>
+</tbody></table>
+
+### XLNet-RTD
+
+### ELECTRA
+
+<table class="tableizer-table">
+<thead><tr class="tableizer-firstrow"><th>Hyperparameters</th><th>REES46 eCommerce</th><th>YOOCHOOSE eCommerce</th><th>G1 news</th><th>ADRESSA news</th></tr></thead><tbody>
+ <tr><td>attn_type</td><td>bi</td><td>bi</td><td>bi</td><td>bi</td></tr>
+ <tr><td>stochastic_shared_embeddings_replacement_prob</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+ <tr><td>d_model</td><td>384</td><td>384</td><td>320</td><td>256</td></tr>
+ <tr><td>item_embedding_dim</td><td>448</td><td>320</td><td>448</td><td>320</td></tr>
+ <tr><td>n_layer</td><td>2</td><td>2</td><td>4</td><td>3</td></tr>
+ <tr><td>n_head</td><td>2</td><td>16</td><td>2</td><td>8</td></tr>
+ <tr><td>input_dropout</td><td>0.1</td><td>0</td><td>0</td><td>0.4</td></tr>
+ <tr><td>dropout</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+ <tr><td>learning_rate</td><td>0.0005122969429</td><td>0.0003369550189</td><td>0.0001436547301</td><td>1.76E-04</td></tr>
+ <tr><td>weight_decay</td><td>8.20E-06</td><td>3.20E-06</td><td>1.88E-05</td><td>1.20E-06</td></tr>
+ <tr><td>per_device_train_batch_size</td><td>320</td><td>320</td><td>128</td><td>256</td></tr>
+ <tr><td>label_smoothing</td><td>0.5</td><td>0.8</td><td>0.5</td><td>0.3</td></tr>
+ <tr><td>item_id_embeddings_init_std</td><td>0.09</td><td>0.09</td><td>0.15</td><td>0.05</td></tr>
+ <tr><td>other_embeddings_init_std</td><td>0.02</td><td>0.08</td><td>0.025</td><td>0.06</td></tr>
+ <tr><td>rtd_discriminator_loss_weight</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+ <tr><td>mlm_probability</td><td>0.4</td><td>0.2</td><td>0.3</td><td>0.3</td></tr>
+</tbody></table>
+
+### ALBERT
 
