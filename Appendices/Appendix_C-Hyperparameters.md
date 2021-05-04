@@ -85,13 +85,13 @@ In this appendix we provide the detailed search space utilized for hyperparamete
  <tr><td>rtd_sample_from_batch</td><td>True</td><td><center>-</center></td></tr>
  <tr><td rowspan=2>hypertuning</td><td>rtd_discriminator_loss_weight</td><td>[1, 10, 20, 30, 40, 50]</td><td>categorical</td></tr>
  <tr><td>mlm_probability</td><td>[0, 0.7]</td><td>discrete_uniform (step 0.1)</td></tr>
-
- <tr><td rowspan=5>ALBERT</td><td>fixed</td><td>mlm</td><td>True</td><td><center>-</center></td></tr>
- <tr><td rowspan=4>hypertuning</td><td>num_hidden_groups</td><td>[1, 4]</td><td>int_uniform</td></tr>
- <tr><td>stochastic_shared_embeddings_replacement_prob</td><td>[0.0, 0.1]</td><td>discrete_uniform (step 0.02)</td></tr>
- <tr><td>inner_group_num</td><td>[1, 4]</td><td>int_uniform</td></tr>
+ <tr><td rowspan=5>ALBERT*</td><td rowspan=3>fixed</td><td>mlm</td><td>True</td><td><center>-</center></td></tr>
+ <tr><td>inner_group_num</td><td>1</td><td><center>-</center></td></tr>
+ <tr><td>num_hidden_groups</td><td>-1</td><td><center>-</center></td></tr>
+ <tr><td rowspan=2>hypertuning</td><td>stochastic_shared_embeddings_replacement_prob</td><td>[0.0, 0.1]]</td><td>discrete_uniform (step 0.02)</td></tr>
  <tr><td>mlm_probability</td><td>[0, 0.7]</td><td>discrete_uniform (step 0.1)</td></tr>
 </tbody></table>
+*In our experiments, we fixed the parameters “inner_group_num” and “num_hidden_groups” to 1 and -1, respectively. Under this configuration, the layers are not sharing the weights which is equivalent to BERT architecture.<br>
 <br>
 <h3>Table 2. XLNet (MLM) - Additional hyperparameters when using side information</h3>
 <table class="hp-table">
@@ -106,7 +106,7 @@ In this appendix we provide the detailed search space utilized for hyperparamete
  <tr><td>hypertuning</td><td>numeric_features_soft_one_hot_encoding_num_embeddings</td><td>[5, 55]</td><td>discrete_uniform (step 10)</td></tr>
  <tr><td>Element-wise merge</td><td>fixed</td><td>input_features_aggregation</td><td>elementwise_sum_multiply_item_embedding</td><td><center>-</center></td></tr>
 </tbody></table>
-<br>
+
 <h3>Table 3. Baselines</h3>
 <table class="hp-table">
 <thead><tr class="table-firstrow"><th>Experiment Group </th><th>Type </th><th>Hyperparameter Name</th><th>Search space</th><th>Sampling Distribution</th></tr><thead><tbody>
