@@ -2,6 +2,7 @@
 
 In this appendix we provide the detailed search space utilized for hyperparameter tuning and the best hyperparameters found for each experiment group (composed by algorithm, training approach and dataset).
 
+* [Average runtime (in minutes) of the 100 hypertuning trials by algorithm and dataset](#Table-1.-Average-runtime-(in-minutes)-of-the-100-hypertuning-trials-by-algorithm-and-dataset)
 * [Hypertuning Search Space](#Hypertuning-Search-Space)
 * [Best Hyperparameters per Algorithm](#Best-Hyperparameters-per-Algorithm)
     * Baselines
@@ -25,12 +26,37 @@ In this appendix we provide the detailed search space utilized for hyperparamete
        * [XLNet-MLM-all-concat-numeric_soft_embedding](#XLNet-MLM-all-concat-numeric_soft_embedding)
        * [XLNet-MLM-all-elementwise](#XLNet-MLM-all-elementwise)
 
+#### Table 1. Average runtime (in minutes) of the 100 hypertuning trials by algorithm and dataset
+<table class="tableizer-table">
+<thead><tr class="tableizer-firstrow"><th colspan=2>&nbsp;</th><th colspan=2>REES46 eCommerce</th><th colspan=2>YOOCHOOSE eCommerce</th><th colspan=2>G1 news</th><th colspan=2>ADRESSA news</th></tr></thead><tbody>
+   <tr><td>&nbsp;</td><td><b>Number of sliding windows</b></td><td colspan=2><p align='center'>15 days</p></td><td colspan=2><p align='center'>90 days</p></td><td colspan=2>190 hours (~8 days)</td><td colspan=2>190 hours (~8 days)</td></tr>
+ <tr><td>&nbsp;</td><td><b>Algorithm</b></td><td>Avg.</td><td>Std. Dev.</td><td>Avg.</td><td>Std. Dev.</td><td>Avg.</td><td>Std. Dev.</td><td>Avg.</td><td>Std. Dev.</td></tr>
+ <tr><td rowspan=6>Baselines</td><td>V-SkNN</td><td>191.4</td><td>15.5</td><td>316.3</td><td>107.5</td><td>282.6</td><td>88.2</td><td>163.0</td><td>95.2</td></tr>
+ <tr><td>STAN</td><td>221.3</td><td>30.0</td><td>378.4</td><td>55.6</td><td>101.2</td><td>12.9</td><td>92.6</td><td>13.2</td></tr>
+ <tr><td>VSTAN</td><td>293.3</td><td>59.0</td><td>412.2</td><td>55.9</td><td>128.7</td><td>20.1</td><td>105.8</td><td>17.1</td></tr>
+ <tr><td>GRU4Rec (FT)</td><td>163.0</td><td>17.5</td><td>756.3</td><td>258.3</td><td>173.1</td><td>31.4</td><td>145.1</td><td>31.6</td></tr>
+ <tr><td>GRU4Rec (SWT)</td><td>146.2</td><td>15.8</td><td>497.0</td><td>157.1</td><td>138.6</td><td>30.8</td><td>101.2</td><td>12.5</td></tr>
+ <tr><td>GRU</td><td>148.3</td><td>25.7</td><td>122.3</td><td>35.8</td><td>63.5</td><td>10.4</td><td>51.8</td><td>8.5</td></tr>
+ <tr><td rowspan=8>Transformers with only the item id feature</td><td>GPT-2 (CLM)</td><td>133.7</td><td>20.7</td><td>94.4</td><td>26.6</td><td>47.5</td><td>9.2</td><td>54.8</td><td>9.8</td></tr>
+ <tr><td>Transformer-XL (CLM)</td><td>108.9</td><td>28.0</td><td>125.1</td><td>37.9</td><td>56.7</td><td>11.7</td><td>69.4</td><td>15.5</td></tr>
+ <tr><td>ALBERT (MLM)</td><td>116.8</td><td>36.0</td><td>116.1</td><td>33.8</td><td>67.1</td><td>16.9</td><td>59.2</td><td>17.6</td></tr>
+ <tr><td>Electra (RTD)</td><td>109.9</td><td>28.3</td><td>125.1</td><td>46.5</td><td>88.2</td><td>18.5</td><td>62.1</td><td>19.2</td></tr>
+ <tr><td>XLNet (PLM)</td><td>430.6</td><td>50.0</td><td>756.3</td><td>91.8</td><td>197.3</td><td>35.5</td><td>205.1</td><td>36.8</td></tr>
+ <tr><td>XLNet (CLM)</td><td>137.9</td><td>24.0</td><td>139.8</td><td>57.8</td><td>54.4</td><td>11.9</td><td>62.1</td><td>11.2</td></tr>
+ <tr><td>XLNET(RTD)</td><td>188.4</td><td>52.3</td><td>257.7</td><td>106.2</td><td>74.6</td><td>21.6</td><td>69.7</td><td>17.3</td></tr>
+ <tr><td>XLNet (MLM)</td><td>104.8</td><td>40.5</td><td>120.8</td><td>42.2</td><td>63.5</td><td>17.2</td><td>63.3</td><td>16.2</td></tr>
+ <tr><td rowspan=3>Transformers with side information features</td><td>Concatenation merge</td><td>142.7</td><td>42.8</td><td>-</td><td>-</td><td>66.9</td><td>17.7</td><td>70.1</td><td>20.7</td></tr>
+ <tr><td>Concatenation merge with numericals using Soft-One Hot Encoding</td><td>173.9</td><td>46.5</td><td>-</td><td>-</td><td>69.0</td><td>21.4</td><td>80.8</td><td>19.8</td></tr>
+ <tr><td>Element-wise merge</td><td>127.7</td><td>26.2</td><td>-</td><td>-</td><td>66.8</td><td>15.4</td><td>56.3</td><td>16.4</td></tr>
+</tbody></table>
+
+
 ## Hypertuning Search Space
 
 <!DOCTYPE html>
 <html>
 <body>
-<h3>Table 1. Algorithms using the Transformers4Rec Meta-Architecture - Transformers and GRU baseline - using only the item id feature</h3>
+<h3>Table 2. Algorithms using the Transformers4Rec Meta-Architecture - Transformers and GRU baseline - using only the item id feature</h3>
 <table class="hp-table">
 <thead><tr class="table-firstrow"><th>Experiment Group </th><th>Type </th><th>Hyperparameter Name</th><th>Search space</th><th>Sampling Distribution</th></tr><thead><tbody>
  <tr><td rowspan=30>Common parameters </td><td rowspan=18>fixed</td><td>inp_merge</td><td>mlp</td><td><center>-</center></td></tr>
@@ -93,7 +119,7 @@ In this appendix we provide the detailed search space utilized for hyperparamete
 </tbody></table>
 *In our experiments, we fixed the parameters “inner_group_num” and “num_hidden_groups” to 1 and -1, respectively. Under this configuration, the layers are not sharing the weights which is equivalent to BERT architecture.<br>
 <br>
-<h3>Table 2. XLNet (MLM) - Additional hyperparameters when using side information</h3>
+<h3>Table 3. XLNet (MLM) - Additional hyperparameters when using side information</h3>
 <table class="hp-table">
 <thead><tr class="table-firstrow"><th>Experiment Group </th><th>Type </th><th>Hyperparameter Name</th><th>Search Space</th><th>Sampling Distribution</th></tr></thead><tbody>
  <tr><td rowspan=4>Common hyperparameters</td><td>fixed</td><td>layer_norm_all_features</td><td>FALSE</td><td><center>-</center></td></tr>
@@ -107,7 +133,7 @@ In this appendix we provide the detailed search space utilized for hyperparamete
  <tr><td>Element-wise merge</td><td>fixed</td><td>input_features_aggregation</td><td>elementwise_sum_multiply_item_embedding</td><td><center>-</center></td></tr>
 </tbody></table>
 
-<h3>Table 3. Baselines</h3>
+<h3>Table 4. Baselines</h3>
 <table class="hp-table">
 <thead><tr class="table-firstrow"><th>Experiment Group </th><th>Type </th><th>Hyperparameter Name</th><th>Search space</th><th>Sampling Distribution</th></tr><thead><tbody>
  <tr><td rowspan=3>Common parameters </td><td rowspan=3>fixed</td><td>model_type</td><td>gru4rec, vsknn, stan, vstan</td><td><center>-</center></td></tr>
