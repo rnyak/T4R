@@ -5,8 +5,8 @@ In this appendix we provide the detailed search space utilized for hyperparamete
 * [Hypertuning Search Space](#Hypertuning-Search-Space)
 * [Best Hyperparameters per Algorithm](#Best-Hyperparameters-per-Algorithm)
     * Baselines
-       * [GRU4REC (FT)](#GRU4REC-(FT))
-       * [GRU4REC (SWT)](#GRU4REC-(SWT))
+       * [GRU4REC (FT)](#GRU4REC-FT)
+       * [GRU4REC (SWT)](#GRU4REC-SWT)
        * [V-SkNN](#V-SkNN)
        * [STAN](#STAN)
        * [VSTAN](#VSTAN)
@@ -161,7 +161,7 @@ In this appendix we provide the detailed search space utilized for hyperparamete
 
 ## Baselines
 
-### GRU4REC (FT)
+### GRU4REC-FT
 
 <table class="table-table">
 <thead><tr class="table-firstrow"><th>Hyperparameters</th><th>REES46 eCommerce</th><th>YOOCHOOSE eCommerce</th><th>G1 news</th><th>ADRESSA news</th></tr></thead><tbody>
@@ -176,7 +176,7 @@ In this appendix we provide the detailed search space utilized for hyperparamete
  <tr><td>gru4rec-loss</td><td>bpr-max</td><td> top1-max</td><td> bpr-max</td><td>top1-max</td></tr>
 </tbody></table>
 
-### GRU4REC (SWT)
+### GRU4REC-SWT
 
 <table class="table-table">
 <thead><tr class="table-firstrow"><th>Hyperparameters</th><th>REES46 eCommerce</th><th>YOOCHOOSE eCommerce</th><th>G1 news</th><th>ADRESSA news</th></tr></thead><tbody>
@@ -193,6 +193,17 @@ In this appendix we provide the detailed search space utilized for hyperparamete
 </tbody></table>
 
 ### V-SkNN
+
+<table class="table-table">
+<thead><tr class="table-firstrow"><th>Hyperparameters</th><th>REES46 eCommerce</th><th>YOOCHOOSE eCommerce</th><th>G1 news</th><th>ADRESSA news</th></tr></thead><tbody>
+ <tr><td>vsknn-k</td><td>600</td><td>500</td><td>800</td><td>1200</td></tr>
+ <tr><td>vsknn-sample_size </td><td>2500</td><td>100</td><td>500</td><td>500</td></tr>
+ <tr><td>vsknn-weighting</td><td>same</td><td>quadratic</td><td>quadratic</td><td>quadratic</td></tr>
+ <tr><td>vsknn-weighting_score</td><td>linear</td><td>quadratic</td><td>quadratic</td><td>quadratic</td></tr>
+ <tr><td>vsknn-idf_weighting</td><td>10</td><td>10</td><td>False</td><td>False</td></tr>
+ <tr><td>vsknn-remind</td><td>True</td><td>False</td><td>False</td><td>False</td></tr>
+ <tr><td>vsknn-push_reminders</td><td>True</td><td>False</td><td>True</td><td>False</td></tr>
+</tbody></table>
 
 ### STAN
 
