@@ -294,3 +294,22 @@ In this appendix we provide the detailed search space utilized for hyperparamete
 
 ### ALBERT
 
+<table class="tableizer-table">
+<thead><tr class="tableizer-firstrow"><th>Hyperparameters</th><th>REES46 eCommerce</th><th>YOOCHOOSE eCommerce</th><th>G1 news</th><th>ADRESSA news</th></tr></thead><tbody>
+ <tr><td>stochastic_shared_embeddings_replacement_prob</td><td>0.06</td><td>0.02</td><td>0.06</td><td>0.08</td></tr>
+ <tr><td>d_model</td><td>320</td><td>448</td><td>384</td><td>192</td></tr>
+ <tr><td>item_embedding_dim</td><td>320</td><td>448</td><td>384</td><td>448</td></tr>
+ <tr><td>n_layer</td><td>2</td><td>4</td><td>4</td><td>4</td></tr>
+ <tr><td>n_head</td><td>8</td><td>1</td><td>2</td><td>8</td></tr>
+ <tr><td>input_dropout</td><td>0.1</td><td>0.1</td><td>0.2</td><td>0.2</td></tr>
+ <tr><td>dropout</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr>
+ <tr><td>learning_rate</td><td>0.0004904752786</td><td>0.0002907211377</td><td>0.0001896108995</td><td>1.90E-04</td></tr>
+ <tr><td>weight_decay</td><td>9.57E-05</td><td>1.85E-06</td><td>1.63E-05</td><td>2.13E-05</td></tr>
+ <tr><td>per_device_train_batch_size</td><td>192</td><td>512</td><td>128</td><td>192</td></tr>
+ <tr><td>label_smoothing</td><td>0.2</td><td>0.3</td><td>0.7</td><td>0.2</td></tr>
+ <tr><td>item_id_embeddings_init_std</td><td>0.11</td><td>0.07</td><td>0.15</td><td>0.15</td></tr>
+ <tr><td>other_embeddings_init_std</td><td>0.025</td><td>0.055</td><td>0.01</td><td>0.03</td></tr>
+ <tr><td>mlm_probability</td><td>0.6</td><td>0.3</td><td>0.2</td><td>0.4</td></tr>
+ <tr><td>num_hidden_groups</td><td>-1</td><td>-1</td><td>-1</td><td>-1</td></tr>
+ <tr><td>inner_group_num</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+</tbody></table>
