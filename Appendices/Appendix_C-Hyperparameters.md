@@ -26,10 +26,11 @@ In this appendix we provide the detailed search space utilized for hyperparamete
        * [XLNet-MLM-all-elementwise](#XLNet-MLM-all-elementwise)
 
 ## Hypertuning Search Space
-### Table 1. Algorithms using the Transformers4Rec Meta-Architecture - Transformers and GRU baseline - using only the item id feature
+
 <!DOCTYPE html>
 <html>
 <body>
+<h3>Table 1. Algorithms using the Transformers4Rec Meta-Architecture - Transformers and GRU baseline - using only the item id feature</h3>
 <table class="hp-table">
 <thead><tr class="table-firstrow"><th>Experiment Group </th><th>Type </th><th>Hyperparameter Name</th><th>Search space</th><th>Sampling Distribution</th></tr><thead><tbody>
  <tr><td rowspan=30>Common parameters </td><td rowspan=18>fixed</td><td>inp_merge</td><td>mlp</td><td><center>-</center></td></tr>
@@ -371,7 +372,6 @@ In this appendix we provide the detailed search space utilized for hyperparamete
 
 <table class="table-table">
 <thead><tr class="table-firstrow"><th>Hyperparameters</th><th>REES46 eCommerce</th><th>YOOCHOOSE eCommerce</th><th>G1 news</th><th>ADRESSA news</th></tr></thead><tbody>
- <tr><td>attn_type</td><td>bi</td><td>bi</td><td>bi</td><td>bi</td></tr>
  <tr><td>stochastic_shared_embeddings_replacement_prob</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
  <tr><td>d_model</td><td>384</td><td>384</td><td>320</td><td>256</td></tr>
  <tr><td>item_embedding_dim</td><td>448</td><td>320</td><td>448</td><td>320</td></tr>
@@ -411,6 +411,69 @@ In this appendix we provide the detailed search space utilized for hyperparamete
 
 ### XLNet-MLM-all-concat
 
+<table class="table-table">
+<thead><tr class="table-firstrow"><th>Hyperparameters</th><th>REES46 eCommerce</th><th>YOOCHOOSE eCommerce</th><th>G1 news</th><th>ADRESSA news</th></tr></thead><tbody>
+ <tr><td>attn_type</td><td>bi</td><td><p align="center">-</p></td><td>bi</td><td>bi</td></tr>
+ <tr><td>stochastic_shared_embeddings_replacement_prob</td><td>0</td><td><p align="center">-</p></td><td>0.02</td><td>0.02</td></tr>
+ <tr><td>d_model</td><td>448.0</td><td><p align="center">-</p></td><td>384</td><td>192</td></tr>
+ <tr><td>item_embedding_dim</td><td>448</td><td><p align="center">-</p></td><td>448</td><td>384</td></tr>
+ <tr><td>n_layer</td><td>2</td><td><p align="center">-</p></td><td>1</td><td>2</td></tr>
+ <tr><td>n_head</td><td>8</td><td><p align="center">-</p></td><td>8</td><td>4</td></tr>
+ <tr><td>input_dropout</td><td>0.0</td><td><p align="center">-</p></td><td>0</td><td>0.3</td></tr>
+ <tr><td>dropout</td><td>0</td><td><p align="center">-</p></td><td>0</td><td>0.00E+00</td></tr>
+ <tr><td>learning_rate</td><td>2.02E-04</td><td><p align="center">-</p></td><td>2.70E-04</td><td>3.43E-04</td></tr>
+ <tr><td>weight_decay</td><td>2.75E-05</td><td><p align="center">-</p></td><td>1.54E-05</td><td>5.88E-06</td></tr>
+ <tr><td>per_device_train_batch_size</td><td>256</td><td><p align="center">-</p></td><td>448</td><td>128</td></tr>
+ <tr><td>label_smoothing</td><td>0.5</td><td><p align="center">-</p></td><td>0.5</td><td>0.4</td></tr>
+ <tr><td>item_id_embeddings_init_std</td><td>0.09</td><td><p align="center">-</p></td><td>0.11</td><td>0.11</td></tr>
+ <tr><td>other_embeddings_init_std</td><td>0.015</td><td><p align="center">-</p></td><td>0.01</td><td>0.03</td></tr>
+ <tr><td>mlm_probability</td><td>0.1</td><td><p align="center">-</p></td><td>0.3</td><td>0.2</td></tr>
+ <tr><td>embedding_dim_from_cardinality_multiplier</td><td>3</td><td><p align="center">-</p></td><td>2</td><td>4</td></tr>
+</tbody></table>
+
 ### XLNet-MLM-all-concat-numeric_soft_embedding
 
+<table class="table-table">
+<thead><tr class="table-firstrow"><th>Hyperparameters</th><th>REES46 eCommerce</th><th>YOOCHOOSE eCommerce</th><th>G1 news</th><th>ADRESSA news</th></tr></thead><tbody>
+ <tr><td>attn_type</td><td>bi</td><td><p align="center">-</p></td><td>bi</td><td>bi</td></tr>
+ <tr><td>stochastic_shared_embeddings_replacement_prob</td><td>0</td><td><p align="center">-</p></td><td>0</td><td>0.06</td></tr>
+ <tr><td>d_model</td><td>448.0</td><td><p align="center">-</p></td><td>128</td><td>256</td></tr>
+ <tr><td>item_embedding_dim</td><td>384</td><td><p align="center">-</p></td><td>384</td><td>320</td></tr>
+ <tr><td>n_layer</td><td>2</td><td><p align="center"><p align="center">-</p></p></td><td>4</td><td>1</td></tr>
+ <tr><td>n_head</td><td>8</td><td><p align="center"><p align="center">-</p></p></td><td>16</td><td>8</td></tr>
+ <tr><td>input_dropout</td><td>0.1</td><td><p align="center">-</p></td><td>0.0</td><td>0.2</td></tr>
+ <tr><td>dropout</td><td>0</td><td><p align="center">-</p></td><td>0</td><td>0.00E+00</td></tr>
+ <tr><td>learning_rate</td><td>3.40E-04</td><td><p align="center">-</p></td><td>2.21E-04</td><td>4.38E-04</td></tr>
+ <tr><td>weight_decay</td><td>3.17E-05</td><td><p align="center">-</p></td><td>6.47E-06</td><td>1.88E-05</td></tr>
+ <tr><td>per_device_train_batch_size</td><td>256</td><td><p align="center">-</p></td><td>128</td><td>128</td></tr>
+ <tr><td>label_smoothing</td><td>0.6</td><td><p align="center"><p align="center">-</p></p></td><td>0.4</td><td>0.9</td></tr>
+ <tr><td>item_id_embeddings_init_std</td><td>0.07</td><td><p align="center">-</p></td><td>0.13</td><td>0.13</td></tr>
+ <tr><td>other_embeddings_init_std</td><td>0.085</td><td><p align="center">-</p></td><td>0.08</td><td>0.06</td></tr>
+ <tr><td>mlm_probability</td><td>0.3</td><td><p align="center">-</p></td><td>0.2</td><td>0.4</td></tr>
+   <tr><td>embedding_dim_from_cardinality_multiplier</td><td>1</td><td><p align="center">-</p></td><td>1</td><td>7</td></tr>
+ <tr><td>numeric_features_project_to_embedding_dim</td><td>20</td><td><p align="center">-</p></td><td>10</td><td>20</td></tr>
+ <tr><td>numeric_features_soft_one_hot_encoding_num_embeddings</td><td>5</td><td><p align="center">-</p></td><td>20</td><td>20</td></tr>
+</tbody></table>
+
+
 ### XLNet-MLM-all-elementwise
+
+<table class="table-table">
+<thead><tr class="table-firstrow"><th>Hyperparameters</th><th>REES46 eCommerce</th><th>YOOCHOOSE eCommerce</th><th>G1 news</th><th>ADRESSA news</th></tr></thead><tbody>
+ <tr><td>attn_type</td><td>bi</td><td><p align="center">-</p></td><td>bi</td><td>bi</td></tr>
+ <tr><td>stochastic_shared_embeddings_replacement_prob</td><td>0</td><td><p align="center">-</p></td><td>0</td><td>0.08</td></tr>
+ <tr><td>d_model</td><td>448.0</td><td><p align="center">-</p></td><td>320</td><td>384</td></tr>
+ <tr><td>item_embedding_dim</td><td>448</td><td><p align="center">-</p></td><td>384</td><td>448</td></tr>
+ <tr><td>n_layer</td><td>3</td><td><p align="center">-</p></td><td>3</td><td>1</td></tr>
+ <tr><td>n_head</td><td>16</td><td><p align="center">-</p></td><td>8</td><td>8</td></tr>
+ <tr><td>input_dropout</td><td>0.1</td><td><p align="center">-</p></td><td>0.2</td><td>0.1</td></tr>
+ <tr><td>dropout</td><td>0</td><td><p align="center">-</p></td><td>0</td><td>0.00E+00</td></tr>
+ <tr><td>learning_rate</td><td>3.81E-04</td><td><p align="center">-</p></td><td>2.90E-04</td><td>2.01E-04</td></tr>
+ <tr><td>weight_decay</td><td>3.16E-05</td><td><p align="center">-</p></td><td>4.76E-06</td><td>2.15E-06</td></tr>
+ <tr><td>per_device_train_batch_size</td><td>384</td><td><p align="center">-</p></td><td>192</td><td>192</td></tr>
+ <tr><td>label_smoothing</td><td>0.1</td><td><p align="center">-</p></td><td>0.5</td><td>0.2</td></tr>
+ <tr><td>item_id_embeddings_init_std</td><td>0.13</td><td><p align="center">-</p></td><td>0.15</td><td>0.07</td></tr>
+ <tr><td>other_embeddings_init_std</td><td>0.06</td><td><p align="center">-</p></td><td>0.065</td><td>0.085</td></tr>
+ <tr><td>mlm_probability</td><td>0.5</td><td><p align="center">-</p></td><td>0.5</td><td>0.5</td></tr>
+ <tr><td>embedding_dim_from_cardinality_multiplier</td><td>8</td><td><p align="center">-</p></td><td>9</td><td>7</td></tr>
+</tbody></table>
