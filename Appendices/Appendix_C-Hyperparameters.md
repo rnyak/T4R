@@ -20,7 +20,7 @@ In this appendix we provide the detailed search space utilized for hyperparamete
        * [XLNet-RTD](#XLNet-RTD)
        * [ELECTRA](#ELECTRA)
        * [ALBERT](#ALBERT)
-   * XLNET MLM with side information features
+    * XLNET MLM with side information features
        * [XLNet-MLM-all-concat](#XLNet-MLM-all-concat)
        * [XLNet-MLM-all-concat-numeric_soft_embedding](#XLNet-MLM-all-concat-numeric_soft_embedding)
        * [XLNet-MLM-all-elementwise](#XLNet-MLM-all-elementwise)
