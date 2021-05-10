@@ -291,18 +291,18 @@ Notes:
 
 <table class="table-table">
 <thead><tr class="table-firstrow"><th>Hyperparameters</th><th>REES46 eCommerce</th><th>YOOCHOOSE eCommerce</th><th>G1 news</th><th>ADRESSA news</th></tr></thead><tbody>
- <tr><td>stochastic_shared_embeddings_replacement_prob</td><td>0.0</td><td>0.08</td><td>&nbsp;</td><td>0.08</td></tr>
- <tr><td>d_model</td><td>128</td><td>192</td><td>&nbsp;</td><td>64</td></tr>
- <tr><td>item_embedding_dim</td><td>448</td><td>448</td><td>&nbsp;</td><td>448</td></tr>
- <tr><td>n_layer</td><td>1</td><td>2</td><td>&nbsp;</td><td>1</td></tr>
- <tr><td>n_head</td><td>1</td><td>1</td><td>&nbsp;</td><td>2</td></tr>
- <tr><td>input_dropout</td><td>0.4</td><td>0.3</td><td>&nbsp;</td><td>0.1</td></tr>
- <tr><td>dropout</td><td>0.2</td><td>0.1</td><td>&nbsp;</td><td>0.4</td></tr>
- <tr><td>learning_rate</td><td>0.0008781937894</td><td>0.0002622314826</td><td>&nbsp;</td><td>0.000838438163</td></tr>
- <tr><td>weight_decay</td><td>1.490114E-05</td><td>2.916506E-06</td><td>&nbsp;</td><td>2.09E-05</td></tr>
- <tr><td>per_device_train_batch_size</td><td>384</td><td>320</td><td>&nbsp;</td><td>192</td></tr>
- <tr><td>label_smoothing</td><td>0.9</td><td>0.2</td><td>&nbsp;</td><td>0.3</td></tr>
- <tr><td>item_id_embeddings_init_std</td><td>0.03</td><td>0.05</td><td>&nbsp;</td><td>0.07</td></tr>
+ <tr><td>stochastic_shared_embeddings_replacement_prob</td><td>0.0</td><td>0.08</td><td>0.06</td><td>0.08</td></tr>
+ <tr><td>d_model</td><td>128</td><td>192</td><td>256</td><td>64</td></tr>
+ <tr><td>item_embedding_dim</td><td>448</td><td>448</td><td>448</td><td>448</td></tr>
+ <tr><td>n_layer</td><td>1</td><td>2</td><td>1</td><td>1</td></tr>
+ <tr><td>n_head</td><td>1</td><td>1</td><td>1</td><td>2</td></tr>
+ <tr><td>input_dropout</td><td>0.4</td><td>0.3</td><td>0.0</td><td>0.1</td></tr>
+ <tr><td>dropout</td><td>0.2</td><td>0.1</td><td>0.3</td><td>0.4</td></tr>
+ <tr><td>learning_rate</td><td>0.0008781937894</td><td>0.0002622314826</td><td>0.0004451168156</td><td>0.000838438163</td></tr>
+ <tr><td>weight_decay</td><td>1.49E-05</td><td>2.92E-06</td><td>5.64E-05</td><td>2.09E-05</td></tr>
+ <tr><td>per_device_train_batch_size</td><td>384</td><td>320</td><td>320</td><td>192</td></tr>
+ <tr><td>label_smoothing</td><td>0.9</td><td>0.2</td><td>0.2</td><td>0.3</td></tr>
+ <tr><td>item_id_embeddings_init_std</td><td>0.03</td><td>0.05</td><td>0.11</td><td>0.07</td></tr>
 </tbody></table>
 
 ### TransformerXL
