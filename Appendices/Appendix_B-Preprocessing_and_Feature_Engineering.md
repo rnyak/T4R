@@ -9,7 +9,6 @@ The sessions are divided in time windows, according to the unit: one day for e-c
 We also explore the usage of side features by Transformers architectures (RQ3). The following table presents the additional features other than the item id and their feature engineering that were used to by our experiments to address RQ3, which explores different techniques to include side information into Transformers.
 It is worthwhile to note that the YOOCHOOSE dataset have a single categorical feature (category), but it is inconsistent over time in the dataset. All interactions before day 84 (2014-06-23) have the same value for that feature, when many other categories are introduced. Under the incremental evaluation protocol, this drops significantly the model accuracy for the early subsequent days so we cannot use that feature for our purpose. As there was no other categorical feature left for the YOOCHOOSE dataset, we decided not including it for the analysis of RQ3.
 
-<!DOCTYPE html>
 <html>
 <body>
 <br>
