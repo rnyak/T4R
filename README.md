@@ -1,6 +1,6 @@
-## Online Appendices of the Paper
+# Online Appendices of the Paper
 
-# Transformers4Rec: Bridging the Gap between NLP and Sequential / Session-Based Recommendation
+## Transformers4Rec: Bridging the Gap between NLP and Sequential / Session-Based Recommendation
 
 Mirroring advancements in Natural Language Processing, much of the recent progress in sequential and session-based recommendation has been driven by advances in model architecture and pretraining techniques originating in the field of NLP.  Transformer architectures in particular have facilitated building higher-capacity models and provided data augmentation and other training techniques which demonstrably improve the effectiveness of sequential and session-based recommendation.  But with a thousandfold more research going on in NLP, the application of transformers for recommendation understandably lags behind.  To remedy this we introduce Transformers4Rec, an open-source library built upon HuggingFace's Transformers library with a similar goal of opening up the advances of NLP based Transformers to the recommender system community and making these advancements immediately accessible for the tasks of sequential and session-based recommendation. Like its core dependency, Transformers4Rec is designed to be extensible by researchers, simple for practitioners, and fast and robust in industrial deployments. 
 
